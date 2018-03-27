@@ -1,0 +1,24 @@
+Q1
+fibonacci=function(n){
++     x=c(1,1)
++     for (i in 3:n) x[i] = x[i-1] + x[i-2]
++     return(x)
++ }
+
+Q3
+a)	dataset<- read.csv("D:\\Lectures\\ACST890\\PersonenSchaden.csv",header=T)
+b)      attach(dataset)
+        mean(total)
+        var(total)
+        sd(total)
+        summary(total) 
+c)	hist(total, breaks = 300)
+d)	hist(finmonth-accmonth, main = "Histogram of  Settelment Delay", xlab = "Settelment Delay (months)")
+e)	>h=hist(legrep, freq = FALSE, seq(0,1,0.5))
+        >h$density = h$counts/sum(h$counts)*100
+        >plot(h,freq=FALSE, main = "Histogram of Legal Repersentation", ylab = "Percentage", xlab = "Legal Repersentation", ylim=c(0,100), xaxt = "n", text(x,0,1))
+f)
+g)
+h)	hist(log(total), main = "Histogram of Log Total Values of Claims", xlab = "Log Total  Value of Claims")
+i)      plot(op_time,total, xlab = "Operation Time", ylab = "Claim Size")
+        plot(op_time,log(total), xlab = "Operation Time", ylab = "Log Claim Size")
